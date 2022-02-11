@@ -14,7 +14,7 @@ const depRelation: DepRelation = [];
 // 将入口文件的绝对路径传入函数
 collectCodeAndDeps(resolve(projectRoot, "index.js"));
 
-writeFileSync("dist.js", generateCode());
+writeFileSync(__dirname + "/dist.js", generateCode());
 console.log("done");
 
 function generateCode() {
